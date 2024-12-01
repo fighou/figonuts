@@ -1,0 +1,102 @@
+﻿@model Figounuts.Models.PresentationModel
+@{
+    var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figounuts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <!-- Langue Selection Form -->
+        <div class="d-flex justify-content-end mb-4">
+            <form id="languageForm" method="get" action="@Url.Action("Index", "Index")">
+                <select name="lang" class="form-select" onchange="this.form.submit()">
+                    <option value="fr" @(currentCulture == "fr" ? "selected" : "")>Français</option>
+                    <option value="en" @(currentCulture == "en" ? "selected" : "")>English</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" id="Accueil-tab" data-bs-toggle="tab" href="#Accueil">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ProjectDescription-tab" data-bs-toggle="tab" href="#ProjectDescription">@Model.Content["ProjectTitle"]</a>
+            </li>
+            @foreach (var key in Model.Content.Keys.Where(k => k.Contains("Title") && k != "ProjectTitle"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" id="@key-tab" data-bs-toggle="tab" href="#@key">@Model.Content[key]</a>
+                </li>
+            }
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="Accueil" class="tab-pane fade show active text-center">
+                <h1>@Model.Content["Welcome"]</h1>
+                <p>@Model.Content["Leader"]</p>
+                <div class="gallery mt-4">
+                    @for (int i = 1; i <= 13; i++)
+                    {
+                        <img src="@Url.Content($"~/Images/Gallery/{i}.png")" alt="Image @i" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="@Url.Content($"~/Images/Gallery/{i}.png")">
+                    }
+                </div>
+            </div>
+
+            <div id="ProjectDescription" class="tab-pane fade">
+                <div class="d-flex flex-column align-items-center">
+                    <p>@Model.Content["ProjectDescription"]</p>
+                    <img src="@Model.Images["ProjectDescription"]" alt="Project Description" class="img-fluid my-3">
+                </div>
+            </div>
+
+            @foreach (var key in Model.Content.Keys.Where(k => k.Contains("Title") && k != "ProjectTitle"))
+            {
+                <div id="@key" class="tab-pane fade">
+                    <div class="d-flex flex-column align-items-center">
+                        <p>@Model.Content[key.Replace("Title", "Description")]</p>
+                        <img src="@Model.Images[key.Replace("Title", "")]" alt="@Model.Content[key]" class="img-fluid my-3">
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Modal for Image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid" alt="Image Agrandie">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const images = document.querySelectorAll('.gallery-image');
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                const src = img.getAttribute('data-src');
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = src;
+            });
+        });
+    </script>
+</body>
+</html>

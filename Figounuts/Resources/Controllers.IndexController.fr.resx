@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProjectPresentationTitle" xml:space="preserve">
+    <value>Présentation du Projet</value>
+  </data>
+  <data name="ProjectPresentationText" xml:space="preserve">
+    <value>Notre principal projet consiste à établir la marque “FIGOU NUTS” dans le domaine de l’industrie agro-alimentaire.
+      Cette initiative prend racine dans l’inspiration de notre fondateur, M. Mouetaz FIGHOU, influencé par ses voyages
+      dans des nations africaines productrices de noix, en particulier le Sénégal. Mouetaz FIGHOU possède déjà une société
+      spécialisée dans le décorticage des noix de cajou au Sénégal. Notre activité principale est la création et la promotion de la marque “FIGOU NUTS” sur le marché.
+      Nous mettrons l’accent sur la construction d’une solide image de marque, en accordant une attention particulière à la qualité, à l’innovation et à la présentation de nos produits.
+    </value>
+  </data>
+  <data name="VisionTitle" xml:space="preserve">
+    <value>Vision</value>
+  </data>
+  <data name="VisionText" xml:space="preserve">
+    <value>FigouNuts aspire à devenir une marque emblématique sur les marchés nationaux et internationaux. Nous voulons redéfinir la norme en matière de présentation et de communication des produits locaux, tout en inspirant une communauté mondiale autour de la qualité et de l'innovation.
+    </value>
+  </data>
+  <data name="ValuesTitle" xml:space="preserve">
+    <value>Valeurs</value>
+  </data>
+  <data name="ValuesText" xml:space="preserve">
+    <value>Notre succès se mesure non seulement en termes de ventes, mais surtout par l’impact positif sur les individus et les communautés que nous touchons.
+    </value>
+  </data>
+  <data name="MissionTitle" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="MissionText" xml:space="preserve">
+    <value>Notre mission est de transformer la consommation de noix en une expérience sensorielle inoubliable, tout en éveillant la conscience collective sur l’importance de la nutrition et de la santé.
+    </value>
+  </data>
+  <data name="QualityCommitmentTitle" xml:space="preserve">
+    <value>Élever la Qualité des Produits Locaux</value>
+  </data>
+  <data name="QualityCommitmentText" xml:space="preserve">
+    <value>Nous nous engageons à offrir des noix de la plus haute qualité, soigneusement sélectionnées et présentées avec soin.
+    </value>
+  </data>
+  <data name="EducationTitle" xml:space="preserve">
+    <value>Éduquer sur les Bienfaits des Noix</value>
+  </data>
+  <data name="EducationText" xml:space="preserve">
+    <value>Nous sensibilisons le public aux nombreux bienfaits pour la santé associés à la consommation de noix.
+    </value>
+  </data>
+  <data name="SustainabilityTitle" xml:space="preserve">
+    <value>Promouvoir la Durabilité</value>
+  </data>
+  <data name="SustainabilityText" xml:space="preserve">
+    <value>Nous adoptons des pratiques durables tout au long de notre chaîne de valeur afin de minimiser notre impact sur l’environnement.
+    </value>
+  </data>
+  <data name="CommunityTitle" xml:space="preserve">
+    <value>Cultiver une Communauté Mondiale</value>
+  </data>
+  <data name="CommunityText" xml:space="preserve">
+    <value>FigouNuts cherche à connecter des individus du monde entier autour d’une passion commune pour la qualité, la santé et le plaisir de vivre.
+    </value>
+  </data>
+  <data name="Leader" xml:space="preserve">
+    <value>Le leader dans la production des noix de cajou</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenue chez Figounuts</value>
+  </data>
+</root>
