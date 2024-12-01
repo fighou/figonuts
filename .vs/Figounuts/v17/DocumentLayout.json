@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|solutionrelative:figounuts\\resources\\controllers.indexcontroller.en.resx||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|c:\\users\\zfighou\\desktop\\projects\\figounuts\\figounuts\\resources\\controllers.indexcontroller.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\figounuts\\resources\\controllers.indexcontroller.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|solutionrelative:figounuts\\resources\\controllers.indexcontroller.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|solutionrelative:figounuts\\resources\\controllers.indexcontroller.fr.resx||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|c:\\users\\zfighou\\desktop\\projects\\figounuts\\figounuts\\resources\\controllers.indexcontroller.fr.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\figounuts\\resources\\controllers.indexcontroller.fr.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{3CA51E48-9B72-482F-9FFA-876CE3F77376}|Figounuts\\Figounuts.csproj|solutionrelative:figounuts\\resources\\controllers.indexcontroller.fr.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -119,6 +119,10 @@
               "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Controllers.IndexController.en.resx",
@@ -141,32 +145,7 @@
               "RelativeToolTip": "Figounuts\\Controllers\\IndexController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:07:05.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Controllers.IndexController.en.resx",
-              "DocumentMoniker": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.en.resx",
-              "RelativeDocumentMoniker": "Figounuts\\Resources\\Controllers.IndexController.en.resx",
-              "ToolTip": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.en.resx",
-              "RelativeToolTip": "Figounuts\\Resources\\Controllers.IndexController.en.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-12-01T13:24:13.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Controllers.IndexController.fr.resx",
-              "DocumentMoniker": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.fr.resx",
-              "RelativeDocumentMoniker": "Figounuts\\Resources\\Controllers.IndexController.fr.resx",
-              "ToolTip": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.fr.resx",
-              "RelativeToolTip": "Figounuts\\Resources\\Controllers.IndexController.fr.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-12-01T13:48:13.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:07:05.895Z"
             },
             {
               "$type": "Document",
@@ -178,8 +157,7 @@
               "RelativeToolTip": "Figounuts\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAD8AAAAAAAAAAAAswGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-01T14:53:02.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T14:53:02.858Z"
             },
             {
               "$type": "Document",
@@ -191,8 +169,7 @@
               "RelativeToolTip": "Figounuts\\Resources\\Controllers.IndexController.fr.resx",
               "ViewState": "AQIAAJMAAAAAAAAAAAAIwLkAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-12-01T13:47:57.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:47:57.788Z"
             },
             {
               "$type": "Document",
@@ -204,8 +181,7 @@
               "RelativeToolTip": "Figounuts\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:26:11.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:26:11.011Z"
             },
             {
               "$type": "Document",
@@ -217,8 +193,7 @@
               "RelativeToolTip": "Figounuts\\Views\\Index\\Index.cshtml",
               "ViewState": "AQIAAEUAAAAAAAAAAAAwwGYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T13:31:54.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:31:54.306Z"
             },
             {
               "$type": "Document",
@@ -230,8 +205,29 @@
               "RelativeToolTip": "Figounuts\\Models\\PresentationModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:36:43.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T13:36:43.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Controllers.IndexController.en.resx",
+              "DocumentMoniker": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.en.resx",
+              "RelativeDocumentMoniker": "Figounuts\\Resources\\Controllers.IndexController.en.resx",
+              "ToolTip": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.en.resx",
+              "RelativeToolTip": "Figounuts\\Resources\\Controllers.IndexController.en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-12-01T13:24:13.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Controllers.IndexController.fr.resx",
+              "DocumentMoniker": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.fr.resx",
+              "RelativeDocumentMoniker": "Figounuts\\Resources\\Controllers.IndexController.fr.resx",
+              "ToolTip": "C:\\Users\\zfighou\\Desktop\\projects\\Figounuts\\Figounuts\\Resources\\Controllers.IndexController.fr.resx",
+              "RelativeToolTip": "Figounuts\\Resources\\Controllers.IndexController.fr.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-12-01T13:48:13.474Z"
             }
           ]
         }
