@@ -183,4 +183,22 @@
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenue chez Figounuts</value>
   </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Figounuts</value>
+  </data>
+  <data name="PromoterName" xml:space="preserve">
+    <value>Mouetaz Fighou, Av. Mohamed Kharraz, rue Anoual, Tétouan</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>n23, etg 2, Appt3, Tétouan.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>contact@figounuts.com</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>06.88.11.33.00</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
 </root>
