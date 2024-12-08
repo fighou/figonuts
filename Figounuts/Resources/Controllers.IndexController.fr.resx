@@ -120,7 +120,7 @@
   <data name="ProjectPresentationTitle" xml:space="preserve">
     <value>Présentation du Projet</value>
   </data>
-  <data name="ProjectPresentationText" xml:space="preserve">
+  <data name="ProjectPresentationDescription" xml:space="preserve">
     <value>Notre principal projet consiste à établir la marque “FIGOU NUTS” dans le domaine de l’industrie agro-alimentaire.
       Cette initiative prend racine dans l’inspiration de notre fondateur, M. Mouetaz FIGHOU, influencé par ses voyages
       dans des nations africaines productrices de noix, en particulier le Sénégal. Mouetaz FIGHOU possède déjà une société
@@ -131,57 +131,74 @@
   <data name="VisionTitle" xml:space="preserve">
     <value>Vision</value>
   </data>
-  <data name="VisionText" xml:space="preserve">
-    <value>FigouNuts aspire à devenir une marque emblématique sur les marchés nationaux et internationaux. Nous voulons redéfinir la norme en matière de présentation et de communication des produits locaux, tout en inspirant une communauté mondiale autour de la qualité et de l'innovation.
-    </value>
+  <data name="VisionDescription" xml:space="preserve">
+    <value>FigouNuts aspire à devenir une marque emblématique, non
+seulement dans les marchés nationaux mais sur la scène
+mondiale. Nous rêvons de redéfinir la norme en matière de
+présentation et de communication des produits locaux. En nous
+appuyant sur l’authenticité marocaine et l’innovation constante,
+nous voulons être reconnus comme les champions de la santé,
+inspirant les individus à adopter une alimentation équilibrée et
+une vie active. Notre vision va au-delà de la vente de noix ; elle
+englobe la création d’une communauté mondiale qui célèbre la
+qualité, la diversité, et l’énergie positive. FigouNuts, en tant que
+marque, aspire à être une force positive qui stimule l’économie
+locale, tout en représentant fièrement la créativité et le savoirfaire des Marocains à l’échelle mondiale. Notre succès n’est pas
+seulement mesuré en termes de ventes, mais par l’impact positif
+que nous laissons sur les individus et les communautés que nous
+touchons</value>
   </data>
   <data name="ValuesTitle" xml:space="preserve">
     <value>Valeurs</value>
   </data>
-  <data name="ValuesText" xml:space="preserve">
-    <value>Notre succès se mesure non seulement en termes de ventes, mais surtout par l’impact positif sur les individus et les communautés que nous touchons.
-    </value>
+  <data name="ValuesDescription" xml:space="preserve">
+    <value>Notre succès n’est pas seulement mesuré en termes de
+ventes, mais par l’impact positif que nous laissons sur les
+individus et les communautés que nous touchons.
+</value>
   </data>
   <data name="MissionTitle" xml:space="preserve">
     <value>Mission</value>
   </data>
-  <data name="MissionText" xml:space="preserve">
+  <data name="MissionDescription" xml:space="preserve">
     <value>Notre mission est de transformer la consommation de noix en une expérience sensorielle inoubliable, tout en éveillant la conscience collective sur l’importance de la nutrition et de la santé.
     </value>
   </data>
-  <data name="QualityCommitmentTitle" xml:space="preserve">
+  <data name="QualityTitle" xml:space="preserve">
     <value>Élever la Qualité des Produits Locaux</value>
   </data>
-  <data name="QualityCommitmentText" xml:space="preserve">
-    <value>Nous nous engageons à offrir des noix de la plus haute qualité, soigneusement sélectionnées et présentées avec soin.
-    </value>
+  <data name="QualityDescription" xml:space="preserve">
+    <value>FigouNuts s’efforce d’élever les standards des produits locaux
+en offrant des noix de la plus haute qualité, soigneusement
+sélectionnées et présentées avec une attention particulière au
+design et à la communication visuelle.</value>
   </data>
   <data name="EducationTitle" xml:space="preserve">
     <value>Éduquer sur les Bienfaits des Noix</value>
   </data>
-  <data name="EducationText" xml:space="preserve">
+  <data name="EducationDescription" xml:space="preserve">
     <value>Nous sensibilisons le public aux nombreux bienfaits pour la santé associés à la consommation de noix.
     </value>
   </data>
   <data name="SustainabilityTitle" xml:space="preserve">
     <value>Promouvoir la Durabilité</value>
   </data>
-  <data name="SustainabilityText" xml:space="preserve">
+  <data name="SustainabilityDescription" xml:space="preserve">
     <value>Nous adoptons des pratiques durables tout au long de notre chaîne de valeur afin de minimiser notre impact sur l’environnement.
     </value>
   </data>
   <data name="CommunityTitle" xml:space="preserve">
     <value>Cultiver une Communauté Mondiale</value>
   </data>
-  <data name="CommunityText" xml:space="preserve">
+  <data name="CommunityDescription" xml:space="preserve">
     <value>FigouNuts cherche à connecter des individus du monde entier autour d’une passion commune pour la qualité, la santé et le plaisir de vivre.
     </value>
   </data>
   <data name="Leader" xml:space="preserve">
-    <value>Le leader dans la production des noix de cajou</value>
+    <value>L'authenticité des fruits secs grillés dans les fours traditionnels marocains</value>
   </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Bienvenue chez Figounuts</value>
+  <data name="Discover" xml:space="preserve">
+    <value>Découvrez</value>
   </data>
   <data name="CompanyName" xml:space="preserve">
     <value>Figounuts</value>
@@ -200,5 +217,20 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Accueil</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contactez nous</value>
+  </data>
+  <data name="Croquez" xml:space="preserve">
+    <value>Croquez la vie à pleine dent.</value>
+  </data>
+  <data name="Figounuts" xml:space="preserve">
+    <value>Figou Nuts</value>
+  </data>
+  <data name="NosFruitsSecs" xml:space="preserve">
+    <value>Nos fruits secs</value>
+  </data>
+  <data name="NosPacks" xml:space="preserve">
+    <value>Nos packs</value>
   </data>
 </root>

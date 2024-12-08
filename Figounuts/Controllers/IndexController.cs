@@ -1,6 +1,7 @@
 ﻿using Figounuts.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
 
 namespace Figounuts.Controllers
 {
@@ -15,48 +16,71 @@ namespace Figounuts.Controllers
 
         public IActionResult Index(string lang)
         {
-            if (!string.IsNullOrEmpty(lang))
-            {
-                var culture = new System.Globalization.CultureInfo(lang);
-                Thread.CurrentThread.CurrentCulture = culture;
-                Thread.CurrentThread.CurrentUICulture = culture;
-            }
+            SetCulture(lang);
+            var model = CreatePresentationModel();
+            return View(model);
+        }
 
-            var content = new Dictionary<string, string>
+        [HttpPost]
+        public IActionResult SendContact(string name, string phone, string message)
+        {
+            TempData["SuccessMessage"] = "Votre message a été envoyé avec succès!";
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult NosFruitsSecs()
+        {
+            var model = CreatePresentationModel();
+            return View(model);
+        }
+
+        public IActionResult Presentation()
+        {
+            var model = CreatePresentationModel();
+            return View(model);
+        }
+
+        public IActionResult Contact()
+        {
+            var model = CreatePresentationModel();
+            return View(model);
+        }
+
+        private void SetCulture(string lang)
+        {
+            var culture = string.IsNullOrEmpty(lang) ? "fr" : lang;
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
+        }
+
+        private PresentationModel CreatePresentationModel()
+        {
+            return new PresentationModel
             {
-                { "Home", _localizer["Home"] },
-                { "Presentation", _localizer["Presentation"] },
-                { "Contact", _localizer["Contact"] },
-                { "ProjectTitle", _localizer["ProjectPresentationTitle"] },
-                { "VisionTitle", _localizer["VisionTitle"] },
-                { "VisionDescription", _localizer["VisionText"] },
-                { "ValuesTitle", _localizer["ValuesTitle"] },
-                { "ValuesDescription", _localizer["ValuesText"] },
-                { "MissionTitle", _localizer["MissionTitle"] },
-                { "MissionDescription", _localizer["MissionText"] },
-                { "QualityTitle", _localizer["QualityCommitmentTitle"] },
-                { "QualityDescription", _localizer["QualityCommitmentText"] },
-                { "EducationTitle", _localizer["EducationTitle"] },
-                { "EducationDescription", _localizer["EducationText"] },
-                { "SustainabilityTitle", _localizer["SustainabilityTitle"] },
-                { "SustainabilityDescription", _localizer["SustainabilityText"] },
-                { "CommunityTitle", _localizer["CommunityTitle"] },
-                { "CommunityDescription", _localizer["CommunityText"] },
-                { "Welcome", _localizer["Welcome"] },
-                { "Leader", _localizer["Leader"] },
-                { "CompanyName", _localizer["CompanyName"] },
-                { "PromoterName", _localizer["PromoterName"] },
-                { "Address", _localizer["Address"] },
-                { "Email", _localizer["Email"] },
-                { "PhoneNumber", _localizer["PhoneNumber"] },
-                { "ContactUs", _localizer["ContactUs"] },
-                { "Name", _localizer["Name"] },
-                { "Phone", _localizer["Phone"] },
-                { "Message", _localizer["Message"] },
-                { "SendButton", _localizer["SendButton"] }
+                Content = GetLocalizedContent(),
+                Images = GetImages(),
+                NosFruitsSecsModel = CreateNosFruitsSecsModel()
+            };
+        }
+
+        private Dictionary<string, string> GetLocalizedContent()
+        {
+            var contentKeys = new[]
+            {
+                "Home", "Presentation", "Contact", "ProjectTitle", "VisionTitle", "VisionDescription",
+                "ValuesTitle", "ValuesDescription", "MissionTitle", "MissionDescription", "QualityTitle",
+                "QualityDescription", "EducationTitle", "EducationDescription", "SustainabilityTitle",
+                "SustainabilityDescription", "CommunityTitle", "CommunityDescription", "Welcome", "Leader",
+                "CompanyName", "PromoterName", "Address", "Email", "PhoneNumber", "ContactUs", "Name", "Phone",
+                "Message", "SendButton", "NosFruitsSecs", "NosPacks", "Figounuts", "Discover", "Croquez"
             };
 
-            var images = new Dictionary<string, string>
+            return contentKeys.ToDictionary(key => key, key => _localizer[key] ?? $"{{{key}}}");
+        }
+
+        private Dictionary<string, string> GetImages()
+        {
+            return new Dictionary<string, string>
             {
                 { "Vision", "/Images/Vision.png" },
                 { "Values", "/Images/Values.png" },
@@ -67,22 +91,25 @@ namespace Figounuts.Controllers
                 { "Community", "/Images/Community.png" },
                 { "ProjectDescription", "/Images/ProjectDescription.png" }
             };
-
-            var model = new PresentationModel
-            {
-                Content = content,
-                Images = images
-            };
-
-            return View(model);
         }
 
-        [HttpPost]
-        public IActionResult SendContact(string Name, string Phone, string Message)
+        private NosFruitsSecsModel CreateNosFruitsSecsModel()
         {
-            // Send the contact message, save it, or send via email (depending on your logic)
-            TempData["SuccessMessage"] = "Votre message a été envoyé avec succès!";
-            return RedirectToAction("Index");
+            return new NosFruitsSecsModel
+            {
+                MainImage = "/Images/FigouNuts-04_1024x1024.jpg",
+                FruitImages = new List<FruitImage>
+                {
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/1.jpg", Text = "Amandes à partir de 40.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/2.jpg", Text = "Mix Figou Nuts à partir de 46.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/3.jpg", Text = "Noix de Cajou à partir de 49.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/4.jpg", Text = "Pistache à partir de 49.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/5.jpg", Text = "Noix de Cajou à partir de 49.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/6.jpg", Text = "Pistache à partir de 49.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/7.jpg", Text = "Pack gourmand à partir de 420.00 dh" },
+                    new FruitImage { ImagePath = "/Images/NosFruitsSecs/8.jpg", Text = "Amandes à partir de 40.00 dh" }
+                }
+            };
         }
     }
 }

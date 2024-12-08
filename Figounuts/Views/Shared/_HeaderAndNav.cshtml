@@ -1,0 +1,46 @@
+﻿@model Figounuts.Models.PresentationModel
+@{
+    var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+}
+
+<header class="d-flex justify-content-between align-items-center mb-4">
+    <img src="~/Images/logo.png" alt="Figounuts Logo" class="img-fluid" style="max-height: 50px;">
+    <div class="d-flex align-items-center">
+        <form id="languageForm" method="get" action="@Url.Action("Index", "Index")" class="me-3">
+            <select name="lang" class="form-select" onchange="this.form.submit()">
+                <option value="fr" @(currentCulture == "fr" ? "selected" : "")>Français</option>
+                <option value="en" @(currentCulture == "en" ? "selected" : "")>English</option>
+            </select>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</header>
+<ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index", "Index")">
+            @Model.Content["Home"]
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Presentation", "Index")">
+            @Model.Content["Presentation"]
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("NosFruitsSecs", "Index")">
+            @Model.Content["NosFruitsSecs"]
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            @Model.Content["NosPacks"]
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Contact", "Index")">
+            @Model.Content["Contact"]
+        </a>
+    </li>
+</ul>

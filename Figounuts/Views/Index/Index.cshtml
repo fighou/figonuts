@@ -12,170 +12,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="container my-5">
+        @Html.Partial("_HeaderAndNav", Model)
 
-        <!-- Header with Logo and Language Selector -->
-        <header class="d-flex justify-content-between align-items-center mb-4">
-            <img src="~/Images/logo.png" alt="Figounuts Logo" class="img-fluid" style="max-height: 50px;">
-            <div class="d-flex align-items-center">
-                <form id="languageForm" method="get" action="@Url.Action("Index", "Index")" class="me-3">
-                    <select name="lang" class="form-select" onchange="this.form.submit()">
-                        <option value="fr" @(currentCulture == "fr" ? "selected" : "")>Français</option>
-                        <option value="en" @(currentCulture == "en" ? "selected" : "")>English</option>
-                    </select>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </header>
-
-        <!-- Navigation Tabs -->
-        <ul class="nav nav-tabs justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#Accueil">@Model.Content["Home"]</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#Presentation">@Model.Content["Presentation"]</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#Contact">@Model.Content["Contact"]</a>
-            </li>
-        </ul>
-
-        <!-- Tab Content -->
+        <!-- Main Content -->
         <div class="tab-content mt-4">
             <!-- Accueil Tab -->
             <div id="Accueil" class="tab-pane fade show active text-center">
-                <h1 class="display-4">@Model.Content["Welcome"]</h1>
-                <p class="lead">@Model.Content["Leader"]</p>
-                <div class="row g-3 mt-4">
-                    @for (int i = 1; i <= 13; i++)
-                    {
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <img src="@Url.Content($"~/Images/Gallery/{i}.png")"
-                                 alt="Image @i"
-                                 class="img-fluid rounded"
-                                 data-bs-toggle="modal"
-                                 data-bs-target="#imageModal"
-                                 data-src="@Url.Content($"~/Images/Gallery/{i}.png")">
-                        </div>
-                    }
+                <div class="position-relative">
+                    <img src="~/Images/Accueil.jpg" alt="Accueil" class="img-fluid w-100">
+                    <div class="position-absolute top-50 start-50 translate-middle bg-white p-4 rounded shadow text-center">
+                        <h2 class="mb-2">@Model.Content["Figounuts"]</h2>
+                        <p class="mb-3">@Model.Content["Croquez"]</p>
+                        <a href="@Url.Action("Index", "Collections")" class="btn btn-primary">@Model.Content["Discover"]</a>
+                    </div>
                 </div>
-
-            </div>
-
-            <!-- Presentation Tab -->
-            <div id="Presentation" class="tab-pane fade">
-                <div class="row">
-                    <!-- Vertical Tabs for Desktop -->
-                    <div class="col-md-3 d-none d-md-block">
-                        <div class="nav flex-column nav-pills">
-                            @foreach (var key in Model.Content.Keys.Where(k => k.Contains("Title") && k != "ProjectTitle"))
-                            {
-                                <a class="nav-link @(key == "VisionTitle" ? "active" : "")" data-bs-toggle="pill" href="#v-pills-@key">@Model.Content[key]</a>
-                            }
-                        </div>
-                    </div>
-
-                    <div class="accordion d-md-none" id="mobileAccordion">
-                        @foreach (var key in Model.Content.Keys.Where(k => k.Contains("Title") && k != "ProjectTitle"))
-                        {
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading-@key">
-                                    <button class="accordion-button @(key == "VisionTitle" ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@key" aria-expanded="@(key == "VisionTitle" ? "true" : "false")" aria-controls="collapse-@key">
-                                        @Model.Content[key]
-                                    </button>
-                                </h2>
-                                <div id="collapse-@key" class="accordion-collapse collapse @(key == "VisionTitle" ? "show" : "")" aria-labelledby="heading-@key" data-bs-parent="#mobileAccordion">
-                                    <div class="accordion-body">
-                                        <p>@Model.Content[key.Replace("Title", "Description")]</p>
-                                        <img src="@Model.Images[key.Replace("Title", "")]" alt="@Model.Content[key]" class="img-fluid rounded">
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    </div>
-
-                    <!-- Desktop tabs -->
-                    <div class="col-md-9 d-none d-md-block">
-                        <div class="tab-content">
-                            @foreach (var key in Model.Content.Keys.Where(k => k.Contains("Title") && k != "ProjectTitle"))
-                            {
-                                <div class="tab-pane fade @(key == "VisionTitle" ? "show active" : "")" id="v-pills-@key">
-                                    <p>@Model.Content[key.Replace("Title", "Description")]</p>
-                                    <img src="@Model.Images[key.Replace("Title", "")]" alt="@Model.Content[key]" class="img-fluid rounded">
-                                </div>
-                            }
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Contact Tab -->
-            <div id="Contact" class="tab-pane fade">
-                <h2 class="my-4">@Model.Content["ContactUs"]</h2>
-                <form method="post" action="@Url.Action("SendContact", "Index")">
-                    <div class="mb-3">
-                        <label for="Name" class="form-label">@Model.Content["Name"]</label>
-                        <input type="text" class="form-control" id="Name" name="Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="Phone" class="form-label">@Model.Content["Phone"]</label>
-                        <input type="tel" class="form-control" id="Phone" name="Phone" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="Message" class="form-label">@Model.Content["Message"]</label>
-                        <textarea class="form-control" id="Message" name="Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">@Model.Content["SendButton"]</button>
-                </form>
+                <br />
+                <p class="lead-3">@Model.Content["Discover"]</p>
+                <h4 class="fs-3">@Model.Content["Figounuts"]</h4>
+                <p class="lead">@Model.Content["Leader"]</p>             
             </div>
         </div>
     </div>
-
-    <!-- Modal for Image -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <img src="" id="modalImage" class="img-fluid" alt="Image Agrandie">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-4">
-        <div class="container">
-            <p>@Model.Content["CompanyName"]</p>
-            <p>@Model.Content["PromoterName"]</p>
-            <p>@Model.Content["Address"]</p>
-            <p>Email: <a href="mailto:contact@figounuts.com" class="text-light">@Model.Content["Email"]</a></p>
-            <p>Phone: <a href="tel:+066688113300" class="text-light">@Model.Content["PhoneNumber"]</a></p>
-        </div>
-    </footer>
-
+    @Html.Partial("_Footer", Model)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Ajout d'un événement de clic sur les images
-        document.addEventListener('DOMContentLoaded', () => {
-            const modalImage = document.getElementById('modalImage');
-
-            document.querySelectorAll('[data-bs-toggle="modal"]').forEach(image => {
-                image.addEventListener('click', function () {
-                    const src = this.getAttribute('data-src'); // Récupère l'attribut `data-src`
-                    modalImage.setAttribute('src', src);      // Met à jour l'image dans le modal
-                });
-            });
-        });
-    </script>
-
 </body>
 </html>
