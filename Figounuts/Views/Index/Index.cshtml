@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,26 +17,28 @@
     <div class="container my-5">
         @Html.Partial("_HeaderAndNav", Model)
 
-        <!-- Main Content -->
-        <div class="tab-content mt-4">
-            <!-- Accueil Tab -->
-            <div id="Accueil" class="tab-pane fade show active text-center">
-                <div class="position-relative">
-                    <img src="~/Images/Accueil.jpg" alt="Accueil" class="img-fluid w-100">
-                    <div class="position-absolute top-50 start-50 translate-middle bg-white p-4 rounded shadow text-center">
-                        <h2 class="mb-2">@Model.Content["Figounuts"]</h2>
-                        <p class="mb-3">@Model.Content["Croquez"]</p>
-                        <a href="@Url.Action("Index", "Collections")" class="btn btn-primary">@Model.Content["Discover"]</a>
-                    </div>
+        <div class="featured-content--root">
+            <!-- Image and text overlay using Bootstrap utilities -->
+            <div class="position-relative">
+                <img src="~/Images/Accueil.jpg" alt="Accueil" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-75 p-3 bg-dark bg-opacity-50">
+                    <h2>@Model.Content["Figounuts"]</h2>
+                    <p>@Model.Content["Croquez"]</p>
+                    <a href="@Url.Action("NosFruitsSecs", "Index")" class="btn btn-primary btn-sm">@Model.Content["Discover"]</a>
                 </div>
-                <br />
-                <p class="lead-3">@Model.Content["Discover"]</p>
+            </div>
+
+            <div class="container mt-5 text-center">
+                <p class="lead">@Model.Content["Discover"]</p>
                 <h4 class="fs-3">@Model.Content["Figounuts"]</h4>
-                <p class="lead">@Model.Content["Leader"]</p>             
+                <p class="lead">@Model.Content["Leader"]</p>
             </div>
         </div>
     </div>
+
     @Html.Partial("_Footer", Model)
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
